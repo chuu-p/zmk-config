@@ -44,6 +44,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        jk-esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <23 24>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
