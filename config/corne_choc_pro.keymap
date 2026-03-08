@@ -66,10 +66,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q        &kp W           &kp E           &kp R             &kp T      &kp C_MUTE  &kp C_PP  &kp Y      &kp U              &kp I            &kp O           &kp P           &kp BSPC
-&kp LCTRL  &hl LCTRL A  &hl LEFT_ALT S  &hl LEFT_GUI D  &hl LEFT_SHIFT F  &kp G      &kp RALT    &kp RALT  &kp H      &hr RIGHT_SHIFT J  &hr RIGHT_GUI K  &hr LEFT_ALT L  &hr RCTRL SEMI  &kp SQT
-&kp LSHFT  &kp Z        &kp X           &kp C           &kp V             &kp B                            &kp N      &kp M              &kp COMMA        &kp DOT         &kp FSLH        &kp ESC
-                                        &kp LEFT_GUI    &mo 1             &kp SPACE                        &kp ENTER  &mo 2              &kp BACKSPACE
+&kp TAB    &kp Q        &kp W           &kp E            &kp R             &kp T      &kp C_MUTE  &kp C_PP  &kp Y      &kp U              &kp I            &kp O           &kp P           &kp BSPC
+&kp LCTRL  &hl LCTRL A  &hl LEFT_ALT S  &hl LEFT_GUI D   &hl LEFT_SHIFT F  &kp G      &kp RALT    &kp RALT  &kp H      &hr RIGHT_SHIFT J  &hr RIGHT_GUI K  &hr LEFT_ALT L  &hr RCTRL SEMI  &kp SQT
+&kp LSHFT  &kp Z        &kp X           &kp C            &kp V             &kp B                            &kp N      &kp M              &kp COMMA        &kp DOT         &kp FSLH        &kp ESC
+                                        &rgb_ug RGB_TOG  &mo 1             &kp SPACE                        &kp ENTER  &mo 2              &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
