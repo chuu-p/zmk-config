@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define GAMING  3
+
 / {
     chosen { zmk,physical-layout = &default_layout; };
 };
@@ -50,6 +55,12 @@
         jk-esc {
             bindings = <&kp ESCAPE>;
             key-positions = <23 24>;
+        };
+
+        combo_gaming {
+            timeout-ms = <200>;
+            key-positions = <1 40 43>;
+            bindings = <&tog GAMING>;
         };
     };
 
@@ -106,6 +117,25 @@
 &none  &kp TILDE  &kp SINGLE_QUOTE  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
 &none  &trans     &trans            &trans    &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
                                     &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
+            >;
+        };
+
+        gaming_layer {
+            display-name = "GAMING";
+
+            // -------------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP  |  Y  |  U  |  I  |  O  |  P  | BSPC |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT | RALT |  H  |  J  |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |              |  N  |  M  |  ,  |  .  |  /  | ESC  |
+            //                    | GUI |     | SPC |              | ENT |     | ALT |
+            //
+            // WASD moved to ESDF. Home row mods disabled (all plain &kp).
+
+            bindings = <
+&none  &kp Q   &kp W   &kp E   &kp R   &kp T   &kp C_MUTE  &kp C_PP  &kp Y   &kp U   &kp I   &kp O   &kp P   &none
+&none  &kp A   &kp S   &kp D   &kp F   &kp G   &kp LALT    &kp RALT  &kp H   &kp J   &kp K   &kp L   &kp SEMI  &none
+&none  &kp Z   &kp X   &kp C   &kp V   &kp B                          &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &none
+                            &kp LGUI  &trans  &kp SPACE                  &kp ENTER  &trans  &kp RALT
             >;
         };
 
