@@ -62,6 +62,13 @@
             key-positions = <1 40 43>;
             bindings = <&tog GAMING>;
         };
+
+        combo_exit_gaming {
+            timeout-ms = <200>;
+            key-positions = <2 40 43>;
+            bindings = <&to DEFAULT>;
+            layers = <GAMING>;
+        };
     };
 
     keymap {
